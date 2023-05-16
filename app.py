@@ -13,10 +13,11 @@ def main():
 @app.post('/api/trained-model')
 def trained_model():
     body = request.get_json()
-    prediction = predict_value(body['text'])
-    json_response = {
-        'prediction': prediction
-    }
+    print(body)
+    prediction = predict_value(body)
+    #json_response = {
+        #'prediction': prediction
+    #}
 
-    return json_response
-
+    #return json_response
+    return prediction
